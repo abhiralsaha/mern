@@ -47,3 +47,136 @@ To enhance your application, you might want to consider:
 3. Creating analytics to track user engagement
 4. Adding content management features for updating existing content
 5. Implementing a notification system for new assignments
+
+6. ### Mock Data and Database Seeding Script
+
+I'll create a comprehensive mock data file and a seed script to populate your MongoDB database with sample data. This will help you test the application with realistic data.
+
+```typescriptreact project="panini8_admin"
+...
+```
+
+## Database Seeding Instructions
+
+I've created a comprehensive mock data and seeding system for your Panini8 admin portal. This will populate your MongoDB database with sample users, topics, courses, goals, and assignments.
+
+### What's Included:
+
+1. **Mock Data Generator** (`lib/mock-data.ts`):
+
+1. Creates sample data for all collections
+2. Properly hashes user passwords using bcrypt
+3. Establishes relationships between entities (topics → courses → goals)
+
+
+
+2. **Command-Line Seeder** (`scripts/seed-database.ts`):
+
+1. Connects to your MongoDB database
+2. Clears existing data
+3. Inserts mock data into all collections
+4. Provides a summary of created entities
+
+
+
+3. **API Route Seeder** (`app/api/seed/route.ts`):
+
+1. Allows seeding via a simple API endpoint
+2. Returns a JSON response with counts of created entities
+
+### Mock Data and Database Seeding Script
+
+I'll create a comprehensive mock data file and a seed script to populate your MongoDB database with sample data. This will help you test the application with realistic data.
+
+```typescriptreact project="panini8_admin"
+...
+```
+
+## Database Seeding Instructions
+
+I've created a comprehensive mock data and seeding system for your Panini8 admin portal. This will populate your MongoDB database with sample users, topics, courses, goals, and assignments.
+
+### What's Included:
+
+1. **Mock Data Generator** (`lib/mock-data.ts`):
+
+1. Creates sample data for all collections
+2. Properly hashes user passwords using bcrypt
+3. Establishes relationships between entities (topics → courses → goals)
+
+
+
+2. **Command-Line Seeder** (`scripts/seed-database.ts`):
+
+1. Connects to your MongoDB database
+2. Clears existing data
+3. Inserts mock data into all collections
+4. Provides a summary of created entities
+
+
+
+3. **API Route Seeder** (`app/api/seed/route.ts`):
+
+1. Allows seeding via a simple API endpoint
+2. Returns a JSON response with counts of created entities
+
+
+
+
+
+### Sample Data Overview:
+
+- **Users**:
+
+- Admin user ([admin@panini8.com](mailto:admin@panini8.com) / admin123)
+- Two regular users with sample data
+
+
+
+- **Topics**:
+
+- Web development topics (HTML, CSS, JavaScript, React)
+- Math topics (Algebra, Geometry, Calculus)
+
+
+
+- **Courses**:
+
+- Frontend Fun (HTML + CSS)
+- React Mastery (JavaScript + React)
+- Math Fundamentals (Algebra + Geometry)
+- Advanced Mathematics (Calculus)
+
+
+
+- **Goals**:
+
+- Learn Coding (Frontend + React courses)
+- Mathematical Excellence (Math courses)
+
+
+
+- **Assignments**:
+
+- Sample assignments connecting users to topics
+
+
+
+
+
+### How to Use:
+
+#### Option 1: Command Line Seeding
+
+1. Install the required dependencies:
+
+```shellscript
+npm install ts-node --save-dev
+```
+
+
+2. Run the seed script:
+
+```shellscript
+npm run seed
+```
